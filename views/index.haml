@@ -1,0 +1,16 @@
+!!! 5
+%html
+	%head
+		%meta{ charset: 'utf-8' }
+		%title Hello, Haml!
+	%body
+		#header
+			%h1 Hello, Haml!
+		#content
+			%p
+				I use Haml
+				%span.version=	Haml::VERSION
+				
+				%ul
+					- @users.each do |user|
+						%li= user.user_id
