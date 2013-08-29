@@ -1,0 +1,29 @@
+/* ヘッダー：ページタイトル */
+#page-header .title {
+	margin: 0px;
+	background: #2c3e50;
+	color: white;
+	padding: 5px 10px 5px 10px;
+}
+
+/* ヘッダー：タイトル */
+#header .title {
+	margin-bottom: 20px;
+}
+
+/* フッター */
+#footer {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	text-align: right;
+}
+
+/* TODO */
+.content-todo .table-list .col-control {
+	position: relative;
+}
+.content-todo .table-list .button-submit {
+	position: absolute;
+	right: 10px;
+}

@@ -1,0 +1,38 @@
+/ ページヘッダー
+#page-header
+	%h1.title= @page_title
+	
+
+/ ヘッダー
+#header
+	
+	/ ナビゲーション
+	.btn-toolbar
+		.btn-group
+			%a{ :class => "btn btn-primary", :href => "#" }
+				%span.fui-heart
+				HOME
+			%a{ :class => "btn btn-primary", :href => "#" }
+				%span.fui-eye
+				ACTIVITY
+			%a{ :class => "btn btn-primary", :href => "#" }
+				%span.fui-list
+				TODO
+			%a{ :class => "btn btn-primary", :href => "#" }
+				%span.fui-chat
+				CHAT
+			%a{ :class => "btn btn-primary", :href => "#" }
+				%span.fui-new
+				FORUM
+			%a{ :class => "btn btn-primary", :href => "#" }
+				%span.fui-checkbox-checked
+				VOTE
+			%a{ :class => "btn btn-primary", :href => "#" }
+				%span.fui-search
+				FILE
+			%a{ :class => "btn btn-primary", :href => "#" }
+				%span.fui-user
+				PROFILE
+	
+	/ ページ名
+	%h2.title= @page_name

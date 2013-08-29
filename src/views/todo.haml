@@ -1,0 +1,60 @@
+/ コンテンツ
+.content-todo
+	.row-fluid
+		
+		/ 左カラム
+		.span4
+				
+			/ 更新フォーム
+			%table{ :class => "table table-striped table-insert" }
+				%form{ :action => "/insert", :method => "POST", :id => "insert" }
+					%tbody
+						%tr
+							%td{ :class => "col-caption" } タイトル
+							%td{ :class => "col-form" }
+								%input{ :name => "title", :type => "text", :class => "span3", :placeholder => "input title" }
+						%tr
+							%td{ :class => "col-caption" } 内容
+							%td{ :class => "col-form" }
+								%textarea{ :name => "content", :class => "span3", :placeholder => "input content" }
+						%tr
+							%td{ :class => "col-caption" } タグ
+							%td{ :class => "col-form" }
+								%input{ :name => "tags", :type => "text", :class => "span3", :placeholder => "input tags (sepalated single space)" }
+								スペース区切りで複数指定
+						%tr
+							%td{ :class => "col-control", :colspan => "2" }
+								%input{ :name => "submit", :type => "submit", :value => "INSERT", :class => "btn btn-info button-submit" }
+		
+		/ 右カラム
+		.span8
+			
+			#message
+				%span{ :class => "message"}= @message
+			
+			/ メモテーブル
+			%table{ :class => "table table-striped table-list" }
+				%form{ :action => "/delete", :method => "POST", :id => "delete" }
+					%thead
+						%tr
+							%th{ :class => "col-no" } No
+							%th{ :class => "col-title" } タイトル
+							%th{ :class => "col-content" } 内容
+							%th{ :class => "col-tags" } タグ
+							%th{ :class => "col-datetime" } 日付
+							%th{ :class => "col-select" } 選択
+					%tbody
+						- index = 1
+						- @memos.each do |memo|
+							%tr
+								%td{ :class => "col-no" }= index
+								%td{ :class => "col-title" }= memo.title
+								%td{ :class => "col-content" }= memo.content
+								%td{ :class => "col-tags" }= memo.tags
+								%td{ :class => "col-datetime" }= memo.date_time
+								%td{ :class => "col-select" }
+									%input{ :name => "selection[]", :type => "checkbox", :class => "check-select", :value => memo.date_time }
+							- index += + 1
+						%tr
+							%td{ :class => "col-control", :colspan => "6" }
+								%input{ :name => "submit", :type => "submit", :value => "DELETE SELECTION", :class => "btn btn-warning button-submit" }
