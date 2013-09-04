@@ -27,3 +27,57 @@
 	position: absolute;
 	right: 10px;
 }
+
+.btn {
+	padding: 5px 10px 6px 10px;
+	box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.bookmark {
+	margin-bottom: 5px;
+}
+
+textarea, input[type*=text] {
+	box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.content-chat {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	width: 23.4%;
+	height: 50%;
+	background: rgba(128, 128, 128, 0.1);
+	padding: 5px;
+}
+
+.chat {
+	border-style: solid;
+	border-color: rgba(0, 0, 80, 0.3);
+	border-width: 2px;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+	padding: 3px;
+	margin-bottom: 5px;
+}
+
+.chat .datetime {
+	float: right;
+	font-size: 0.7em;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.chat .name {
+	font-weight: bold;
+}
+.chat .name-blue {
+	color: rgba(0, 0, 255, 0.6);
+}
+.chat .name-pink {
+	color: rgba(255, 64, 64, 0.6);
+}
+
+.chat .text {
+	margin-left: 5px;
+}

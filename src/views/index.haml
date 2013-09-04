@@ -8,6 +8,18 @@
 		
 			= haml :header
 				
-			= haml :todo
-				
+			/ コンテンツ
+			.content-todo
+				.row-fluid
+					
+					/ 左カラム
+					.span3
+						= haml :bookmark
+						
+					/ 右カラム
+					.span9
+						= haml :todo
+						
 			= haml :footer
+			
+			= haml :chat
